@@ -27,6 +27,7 @@ jobs:
         newgrp docker
         composer install
         php artisan sail:install
+        docker ps
         ./vendor/bin/sail up -d
     - name: Generate key
       run: php artisan key:generate
