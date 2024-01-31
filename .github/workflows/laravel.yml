@@ -18,8 +18,9 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo apt update
-        php -r "file_exists('.env') || copy('.env.example', '.env');"
+        
         sudo apt install php8.1
+        php -r "file_exists('.env') || copy('.env.example', '.env');"
         composer install 
         php artisan sail:install
         ./vendor/bin/sail up -d 
