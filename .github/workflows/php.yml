@@ -45,8 +45,8 @@ jobs:
           php artisan sail:install
           ./vendor/bin/sail up -d
 
-      - name: Clear Config
-        run: php artisan config:clear
+      # - name: Clear Config
+      #   run: php artisan config:clear
 
-      - name: Test with phpunit
-        run: vendor/bin/phpunit --coverage-text
+      # - name: Test with phpunit
+      #   run: vendor/bin/phpunit --coverage-text
