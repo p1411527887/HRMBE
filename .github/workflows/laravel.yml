@@ -19,11 +19,7 @@ jobs:
       run: |
         sudo apt update -y
         sudo apt install php8.1 -y
-        
-        composer install -y
-        php artisan sail:install -y
-        ./vendor/bin/sail up -d 
-        
+       
 
         
         
