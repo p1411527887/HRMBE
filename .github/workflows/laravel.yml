@@ -22,7 +22,9 @@ jobs:
     - name: Install Dependencies
       run: | 
         
-        composer install 
+        composer install
+        php artisan sail:install
+        ./vendor/bin/sail up -d
     - name: Generate key
       run: php artisan key:generate
     - name: Directory Permissions
