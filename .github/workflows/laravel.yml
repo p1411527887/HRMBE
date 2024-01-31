@@ -13,12 +13,12 @@ jobs:
 
     steps:
     
-    - name: Copy .env
-      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+    # - name: Copy .env
+    #   run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
       run: |
         sudo apt update
-       
+        php -r "file_exists('.env') || copy('.env.example', '.env');"
         sudo apt install php8.1
         composer install 
         php artisan sail:install
