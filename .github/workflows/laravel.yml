@@ -21,8 +21,8 @@ jobs:
         
         sudo apt install php8.1 -y
         php -r "file_exists('.env') || copy('.env.example', '.env');"
-        composer install -y
-        php artisan sail:install -y
+        composer install 
+        php artisan sail:install 
         ./vendor/bin/sail up -d 
         
 
