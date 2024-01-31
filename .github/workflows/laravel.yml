@@ -19,7 +19,7 @@ jobs:
       run: |
         sudo apt update -y
         sudo apt install php8.1 -y
-        composer install
+        sudo apt install composer
 
         
         
