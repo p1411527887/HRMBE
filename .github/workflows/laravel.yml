@@ -21,8 +21,7 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
       run: | 
-        sudo apt update -y
-        sudo apt install php8.1 -y
+        
         composer install 
     - name: Generate key
       run: php artisan key:generate
